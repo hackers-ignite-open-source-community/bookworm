@@ -4,6 +4,8 @@ import {
   Montserrat_600SemiBold,
   Montserrat_700Bold,
   Montserrat_300Light,
+  Montserrat_400Regular,
+  Montserrat_500Medium,
 } from "@expo-google-fonts/montserrat";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
@@ -25,6 +27,8 @@ export default function App() {
     Montserrat_600SemiBold,
     Montserrat_700Bold,
     Montserrat_300Light,
+    Montserrat_400Regular,
+    Montserrat_500Medium,
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -74,7 +78,11 @@ export default function App() {
             component={InterestDisScreen}
             options={{ headerShown: false }}
           />
-          <Screen name="HomeScreen" component={HomeScreen} />
+          <Screen
+            name="HomeScreen"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
         </Navigator>
       </SafeAreaProvider>
     </NavigationContainer>
