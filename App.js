@@ -13,6 +13,7 @@ import SignupScreen from "./screens/SignupScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Dob from "./screens/Dob";
+import InterestDisScreen from "./screens/InterestDisScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -62,7 +63,16 @@ export default function App() {
               headerBackTitleVisible: false,
             }}
           />
-          <Screen name="Dob" component={Dob} />
+          <Screen
+            name="Dob"
+            component={Dob}
+            options={{ headerTransparent: true, title: "" }}
+          />
+          <Screen
+            name="InterestDiscovery"
+            component={InterestDisScreen}
+            options={{ headerShown: false }}
+          />
         </Navigator>
       </SafeAreaProvider>
     </NavigationContainer>

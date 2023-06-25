@@ -26,9 +26,9 @@ function SignupScreen({ navigation }) {
       >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.inner}>
-            <InputText name={"name"} />
-            <InputText name={"email"} />
-            <InputText name={"password"} />
+            <InputText label={"name"} placeholder={"Enter your name"} />
+            <InputText label={"email"} placeholder={"Enter your email"} />
+            <InputText label={"password"} placeholder={"Enter your password"} />
             <View style={styles.btnContainer}>
               <Button name={"Next"} onPress={onPress} />
             </View>

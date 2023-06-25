@@ -1,6 +1,4 @@
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { Montserrat_600SemiBold } from "@expo-google-fonts/montserrat";
-import { ClipPath, Defs, G, Path, Rect, Svg } from "react-native-svg";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 function Button({ log, name, icon, onPress }) {
   if (log) {

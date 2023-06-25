@@ -2,11 +2,17 @@ import { Montserrat_600SemiBold } from "@expo-google-fonts/montserrat";
 import React from "react";
 import { View, TextInput, Text, StyleSheet } from "react-native";
 
-function InputText({ name }) {
+function InputText({ name, label, placeholder, value, onChange }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{name}</Text>
-      <TextInput style={styles.input} placeholder={`Enter your ${name}`} />
+      <Text style={styles.label}>{label}</Text>
+      <TextInput
+        inputMode={name}
+        style={styles.input}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
     </View>
   );
 }
