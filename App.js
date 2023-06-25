@@ -14,6 +14,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Dob from "./screens/Dob";
 import InterestDisScreen from "./screens/InterestDisScreen";
+import HomeScreen from "./screens/HomeScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -73,6 +74,7 @@ export default function App() {
             component={InterestDisScreen}
             options={{ headerShown: false }}
           />
+          <Screen name="HomeScreen" component={HomeScreen} />
         </Navigator>
       </SafeAreaProvider>
     </NavigationContainer>

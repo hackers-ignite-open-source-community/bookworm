@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-function Button({ log, name, icon, onPress }) {
+function Button({ log, name, icon, onPress, bg }) {
   if (log) {
     return (
       <Pressable onPress={""}>
@@ -9,6 +9,9 @@ function Button({ log, name, icon, onPress }) {
         </View>
       </Pressable>
     );
+  }
+  if (bg) {
+    styles.container = { ...styles.container, backgroundColor: bg };
   }
   return (
     <Pressable onPress={onPress}>
