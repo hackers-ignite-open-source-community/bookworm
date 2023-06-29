@@ -17,6 +17,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Dob from "./screens/Dob";
 import InterestDisScreen from "./screens/InterestDisScreen";
 import HomeScreen from "./screens/HomeScreen";
+import CatePage from "./screens/CatePage";
+import {SearchIcon} from "./components/Images"
 
 SplashScreen.preventAutoHideAsync();
 
@@ -83,6 +85,7 @@ export default function App() {
             component={HomeScreen}
             options={{ headerShown: false }}
           />
+          <Screen name="CategoriesScreen" component={CatePage} options={{title: "", headerTransparent: true, headerBackTitle: false, headerRight: () => <SearchIcon />}} />
         </Navigator>
       </SafeAreaProvider>
     </NavigationContainer>

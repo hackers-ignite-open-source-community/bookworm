@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Image, Platform, StyleSheet, Text, View } from "react-native";
 import { BookIcon, SearchIcon } from "./Images";
 
-function Header() {
+function Header({ route }) {
+  const [title, setTitle] = useState("");
+  useEffect(() => {
+    if (route.name === "Categories") {
+      setTitle("Book Categories");
+    } else if (route.name === "My Story") {
+      setTitle("Library");
+    } else {
+      setTitle("Hi, Favour!");
+    }
+  }, []);
+  console.log(route);
   return (
     <View style={[styles.container, styles.shadowProps]}>
       <BookIcon />
-      <Text style={styles.title}>Hi, Favour!</Text>
+      <Text style={styles.title}>{title}</Text>
       <View style={styles.prop}>
         <SearchIcon />
         <Image source={require("/public/images/user.png")} style={styles.img} />
