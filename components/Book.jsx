@@ -25,6 +25,7 @@ function Book({ Newest, book }) {
       gap: "1.34rem",
     };
     styles.statsText = { ...styles.statsText, fontSize: "0.625rem" };
+    z;
     return (
       <View style={styles.container}>
         <View style={styles.shadowProps}>

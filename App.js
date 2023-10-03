@@ -18,7 +18,8 @@ import Dob from "./screens/Dob";
 import InterestDisScreen from "./screens/InterestDisScreen";
 import HomeScreen from "./screens/HomeScreen";
 import CatePage from "./screens/CatePage";
-import {SearchIcon} from "./components/Images"
+import { SearchIcon } from "./components/Images";
+import { View } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -85,7 +86,20 @@ export default function App() {
             component={HomeScreen}
             options={{ headerShown: false }}
           />
-          <Screen name="CategoriesScreen" component={CatePage} options={{title: "", headerTransparent: true, headerBackTitle: false, headerRight: () => <SearchIcon />}} />
+          <Screen
+            name="CategoriesScreen"
+            component={CatePage}
+            options={{
+              title: "",
+              headerTransparent: true,
+              headerBackTitle: false,
+              headerRight: () => (
+                <View style={{ paddingHorizontal: "1.38rem" }}>
+                  <SearchIcon />
+                </View>
+              ),
+            }}
+          />
         </Navigator>
       </SafeAreaProvider>
     </NavigationContainer>

@@ -20,7 +20,10 @@ function Header({ route }) {
       <Text style={styles.title}>{title}</Text>
       <View style={styles.prop}>
         <SearchIcon />
-        <Image source={require("/public/images/user.png")} style={styles.img} />
+        <Image
+          source={require("../public/images/user.png")}
+          style={styles.img}
+        />
       </View>
     </View>
   );
